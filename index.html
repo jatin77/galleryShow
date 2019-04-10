@@ -10,7 +10,9 @@
 </head>
 
 <body>
-
+  <div class="bg">
+    <img src="1.jpg" alt="">
+  </div>
   <div class="container">
     <div class="main-img">
       <img src="1.jpg" id="current">
@@ -34,6 +36,7 @@
 
     const currentImg=document.querySelector("#current");
     const allImgs=document.querySelectorAll(".imgs img");
+    const bgImage=document.querySelector(".bg img");
     const opacity=.6;
 
     allImgs[0].style.opacity=opacity;
@@ -43,7 +46,7 @@
     function changeMainImg(e){
       allImgs.forEach(img=>img.style.opacity=1);
       currentImg.classList.add("fade-in");
-
+           bgImage.src=e.target.src;
       currentImg.src=e.target.src;
       //remove fadein
       setTimeout(()=>currentImg.classList.remove("fade-in"),500)
