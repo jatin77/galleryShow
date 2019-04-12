@@ -31,4 +31,15 @@ body {
   opacity: 0;
   animation :fadeIn .5s ease-in forwards;
 }
+/*DROPDOENMENU*/
+.sem,.subject,.unit,.dcnUnits,.osUnits,.gtUnits{
+  display: none;
+}
+
+.stream:hover .sem,.sem:hover .subject,.dcn:hover .dcnUnits,.os:hover .osUnits,.gt:hover .gtUnits{
+  display: block;
+}
+.main-ul{
+  position: relative;
+}
 
